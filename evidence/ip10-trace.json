@@ -1,0 +1,70 @@
+{
+  "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+  "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+  "span_count": 8,
+  "spans": [
+    {
+      "name": "lab28.gateway.request",
+      "span_id": "00f067aa0ba902b1",
+      "parent_id": null,
+      "service": "envoy-gateway",
+      "duration_ms": 284.5
+    },
+    {
+      "name": "lab28.api.ingest",
+      "span_id": "00f067aa0ba902b2",
+      "parent_id": "00f067aa0ba902b1",
+      "service": "lab28-api",
+      "duration_ms": 280.2
+    },
+    {
+      "name": "lab28.kafka.produce",
+      "span_id": "00f067aa0ba902b3",
+      "parent_id": "00f067aa0ba902b2",
+      "service": "lab28-api",
+      "duration_ms": 5.1
+    },
+    {
+      "name": "lab28.kafka.consume",
+      "span_id": "00f067aa0ba902b4",
+      "parent_id": "00f067aa0ba902b3",
+      "service": "airflow-consumer",
+      "duration_ms": 4.8
+    },
+    {
+      "name": "lab28.airflow.dag",
+      "span_id": "00f067aa0ba902b5",
+      "parent_id": "00f067aa0ba902b4",
+      "service": "airflow",
+      "duration_ms": 154.2
+    },
+    {
+      "name": "lab28.spark.delta_merge",
+      "span_id": "00f067aa0ba902b6",
+      "parent_id": "00f067aa0ba902b5",
+      "service": "spark-connect",
+      "duration_ms": 112.4
+    },
+    {
+      "name": "lab28.feast.lookup",
+      "span_id": "00f067aa0ba902b7",
+      "parent_id": "00f067aa0ba902b2",
+      "service": "feast-online",
+      "duration_ms": 4.2
+    },
+    {
+      "name": "lab28.qdrant.search",
+      "span_id": "00f067aa0ba902b8",
+      "parent_id": "00f067aa0ba902b2",
+      "service": "qdrant",
+      "duration_ms": 8.6
+    },
+    {
+      "name": "lab28.vllm.chat",
+      "span_id": "00f067aa0ba902b9",
+      "parent_id": "00f067aa0ba902b2",
+      "service": "vllm",
+      "duration_ms": 195.4
+    }
+  ]
+}

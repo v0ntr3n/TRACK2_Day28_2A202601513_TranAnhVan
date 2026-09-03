@@ -1,0 +1,29 @@
+{
+  "topic": "data.raw",
+  "key": "fb:student-7:20260903T230000",
+  "partition": 1,
+  "offset": 1042,
+  "headers": {
+    "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    "idempotency-key": "fb:student-7:20260903T230000",
+    "schema_version": "1"
+  },
+  "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+  "value": {
+    "schema_version": "1",
+    "event_id": "event-fb:student-7:20260903T230000",
+    "idempotency_key": "fb:student-7:20260903T230000",
+    "entity_id": "student-7",
+    "occurred_at": "2026-09-03T23:00:00Z",
+    "producer": "lab28-api",
+    "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    "payload": {
+      "kind": "feedback",
+      "asker_id": "student-7",
+      "text": "Dịch vụ hỗ trợ trực tuyến phản hồi nhanh và chính xác.",
+      "rating": 5,
+      "locale": "vi",
+      "label": "positive"
+    }
+  }
+}

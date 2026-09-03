@@ -1,0 +1,16 @@
+{
+  "collection": "lab28_documents",
+  "question": "Chính sách hoàn tiền của dịch vụ trong bao nhiêu ngày?",
+  "points_total": 42,
+  "embedding_model_id": "BAAI/bge-small-en-v1.5",
+  "results": [
+    {
+      "point_id": "ae2830a8-8656-5e19-8f74-60bdc2d74a73",
+      "doc_id": "policy-refund-v2",
+      "title": "Chính sách đổi trả và hoàn tiền 2026",
+      "snippet": "Khách hàng có thể yêu cầu hoàn tiền 100% trong vòng 14 ngày kể từ khi mua dịch vụ nếu chưa sử dụng quá 20% dung lượng.",
+      "score": 0.8924,
+      "retrieval_mode": "hybrid"
+    }
+  ]
+}

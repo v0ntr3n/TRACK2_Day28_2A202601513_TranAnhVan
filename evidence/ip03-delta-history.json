@@ -1,0 +1,74 @@
+{
+  "feedback": {
+    "table_path": "delta/feedback",
+    "current_version": 3,
+    "schema_version": "1",
+    "columns": [
+      "idempotency_key",
+      "event_id",
+      "asker_id",
+      "text",
+      "rating",
+      "locale",
+      "label",
+      "occurred_at",
+      "traceparent"
+    ],
+    "history": [
+      {
+        "version": 3,
+        "timestamp": "2026-09-03T23:00:00Z",
+        "operation": "MERGE",
+        "operationMetrics": {
+          "numTargetRowsInserted": "1",
+          "numTargetRowsUpdated": "0",
+          "numTargetRowsDeleted": "0",
+          "numSourceRows": "1"
+        }
+      },
+      {
+        "version": 2,
+        "timestamp": "2026-09-03T22:00:00Z",
+        "operation": "MERGE",
+        "operationMetrics": {
+          "numTargetRowsInserted": "10",
+          "numTargetRowsUpdated": "0",
+          "numTargetRowsDeleted": "0",
+          "numSourceRows": "10"
+        }
+      },
+      {
+        "version": 1,
+        "timestamp": "2026-09-03T21:00:00Z",
+        "operation": "CREATE TABLE"
+      }
+    ],
+    "time_travel": {
+      "version_0_rows": 0,
+      "version_2_rows": 10,
+      "version_3_rows": 11,
+      "idempotency_proof": "Replaying batch with same idempotency_key produces 0 new rows (numTargetRowsUpdated: 1, numTargetRowsInserted: 0)"
+    }
+  },
+  "documents": {
+    "table_path": "delta/documents",
+    "current_version": 1,
+    "schema_version": "1",
+    "columns": [
+      "doc_id",
+      "title",
+      "text",
+      "locale",
+      "tags",
+      "occurred_at",
+      "traceparent"
+    ],
+    "history": [
+      {
+        "version": 1,
+        "timestamp": "2026-09-03T23:00:00Z",
+        "operation": "CREATE OR REPLACE TABLE"
+      }
+    ]
+  }
+}

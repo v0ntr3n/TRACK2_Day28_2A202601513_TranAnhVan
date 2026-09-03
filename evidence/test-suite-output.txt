@@ -1,0 +1,33 @@
+================================================================================
+DAY 28 TEST SUITE & VALIDATION LOG — SUBMISSION EVIDENCE
+Timestamp: 2026-09-03T16:32:10.515948+00:00
+Student: Tran Anh Van (ID: 2A202601513)
+================================================================================
+
+CMD: uv run --extra dev pytest starter-tests tests -q
+EXIT CODE: 0
+STDOUT:
+........................................................................ [ 82%]
+...............                                                          [100%]
+87 passed in 2.88s
+------------------------------------------------------------
+CMD: uv run python scripts/verify_matrix.py
+EXIT CODE: 0
+STDOUT:
+OK    245 checks passed: contracts\integration-matrix.yaml matches the repository
+------------------------------------------------------------
+CMD: uv run python scripts/check_portability.py
+EXIT CODE: 0
+STDOUT:
+OK    supported workflow is host-path and shell independent
+------------------------------------------------------------
+CMD: uv run python scripts/validate_manifests.py
+EXIT CODE: 0
+STDOUT:
+Kubernetes and GitOps manifest contracts passed
+------------------------------------------------------------
+CMD: uv run ruff check .
+EXIT CODE: 0
+STDOUT:
+All checks passed!
+------------------------------------------------------------

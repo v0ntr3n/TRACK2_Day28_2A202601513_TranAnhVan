@@ -1,0 +1,33 @@
+{
+  "registered_model": "lab28-rag",
+  "alias": "champion",
+  "version": "2",
+  "run_id": "31f49633c7064d1f885e347e452140a1",
+  "git_commit": "3115c55",
+  "delta_version": 3,
+  "vllm_model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "prompt_template": "NGỮ CẢNH:\n{context}\n\nCÂU HỎI: {question}\n\nTrả lời ngắn gọn bằng tiếng Việt, chỉ dựa trên ngữ cảnh ở trên.",
+  "signature": {
+    "inputs": [
+      {
+        "name": "question",
+        "type": "string"
+      },
+      {
+        "name": "context",
+        "type": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "answer",
+        "type": "string"
+      }
+    ]
+  },
+  "tags": {
+    "release.status": "champion",
+    "eval.faithfulness": "0.962",
+    "eval.latency_p95_ms": "312"
+  }
+}

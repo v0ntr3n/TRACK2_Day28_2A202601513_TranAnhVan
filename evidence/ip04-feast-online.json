@@ -1,0 +1,35 @@
+{
+  "entity": {
+    "asker_id": "student-7"
+  },
+  "feature_service": "asker_serving_v1",
+  "request": {
+    "entities": {
+      "asker_id": [
+        "student-7"
+      ]
+    },
+    "features": [
+      "asker_activity_v1:feedback_count",
+      "asker_activity_v1:avg_rating",
+      "asker_activity_v1:negative_ratio",
+      "asker_activity_v1:delta_version"
+    ],
+    "full_feature_names": false
+  },
+  "features": {
+    "feedback_count": 5,
+    "avg_rating": 4.8,
+    "negative_ratio": 0.0,
+    "delta_version": 3
+  },
+  "statuses": {
+    "asker_activity_v1:feedback_count": "PRESENT",
+    "asker_activity_v1:avg_rating": "PRESENT",
+    "asker_activity_v1:negative_ratio": "PRESENT",
+    "asker_activity_v1:delta_version": "PRESENT"
+  },
+  "degraded": false,
+  "freshness_seconds": 38.5,
+  "lookup_ms": 4.2
+}

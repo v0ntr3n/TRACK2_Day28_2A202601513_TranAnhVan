@@ -1,0 +1,31 @@
+{
+  "gateway": "envoy/1.30.0",
+  "listener_port": 8080,
+  "routes": [
+    {
+      "path": "/healthz",
+      "method": "GET",
+      "response_code": 200,
+      "x_request_id": "c1f7a012-3e28-4e4b-912a-718294a081bc",
+      "direct_response": true
+    },
+    {
+      "path": "/api/v1/chat",
+      "method": "POST",
+      "response_code": 200,
+      "x_request_id": "7b82f091-a182-49ce-b452-f19173c82901",
+      "upstream_cluster": "lab28_api"
+    },
+    {
+      "path": "/api/v1/chat",
+      "method": "POST",
+      "description": "Burst requests exceeding rate limit threshold (10 req/s)",
+      "response_code": 429,
+      "x_request_id": "4a18b762-b912-40cf-a731-9281745a901f",
+      "headers": {
+        "x-envoy-ratelimited": "true",
+        "retry-after": "1"
+      }
+    }
+  ]
+}

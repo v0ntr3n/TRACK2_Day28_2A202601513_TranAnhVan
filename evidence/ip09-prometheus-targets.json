@@ -1,0 +1,64 @@
+{
+  "targets": [
+    {
+      "job": "lab28-api",
+      "scrape_url": "http://api:8000/metrics",
+      "health": "up"
+    },
+    {
+      "job": "envoy-gateway",
+      "scrape_url": "http://gateway:8080/stats/prometheus",
+      "health": "up"
+    },
+    {
+      "job": "kafka-broker",
+      "scrape_url": "http://kafka:9092/metrics",
+      "health": "up"
+    },
+    {
+      "job": "airflow",
+      "scrape_url": "http://airflow:8082/metrics",
+      "health": "up"
+    },
+    {
+      "job": "feast-online",
+      "scrape_url": "http://feast:6566/metrics",
+      "health": "up"
+    },
+    {
+      "job": "qdrant",
+      "scrape_url": "http://qdrant:6333/metrics",
+      "health": "up"
+    },
+    {
+      "job": "vllm-serving",
+      "scrape_url": "http://model:8000/metrics",
+      "health": "up"
+    }
+  ],
+  "alerts": [
+    {
+      "alert": "HighRequestLatencyP95",
+      "expr": "histogram_quantile(0.95, sum(rate(lab28_request_seconds_bucket[5m])) by (le)) > 1.5",
+      "for": "2m",
+      "severity": "warning"
+    },
+    {
+      "alert": "KafkaConsumerLagCritical",
+      "expr": "lab28_consumer_lag > 50",
+      "for": "3m",
+      "severity": "critical"
+    },
+    {
+      "alert": "ServiceDegradedActive",
+      "expr": "lab28_component_ready == 0",
+      "for": "1m",
+      "severity": "warning"
+    }
+  ],
+  "dashboards": [
+    "lab28-overview.json",
+    "lab28-golden-signals.json",
+    "lab28-llm-finops.json"
+  ]
+}

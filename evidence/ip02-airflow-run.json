@@ -1,0 +1,46 @@
+{
+  "dag_id": "lab28_lakehouse_ingestion",
+  "dag_run_id": "scheduled__2026-09-03T23:00:00+00:00",
+  "state": "success",
+  "conf": {
+    "trigger_source": "kafka_consumer",
+    "batch_size": 12
+  },
+  "task_instances": [
+    {
+      "task_id": "poll_kafka_raw",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "dedupe_batch",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "spark_delta_merge",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "materialize_feast_features",
+      "state": "success",
+      "try_number": 1
+    },
+    {
+      "task_id": "publish_processed_event",
+      "state": "success",
+      "try_number": 1
+    }
+  ],
+  "asset_events": [
+    {
+      "uri": "lab28://delta/feedback",
+      "timestamp": "2026-09-03T23:00:00Z"
+    },
+    {
+      "uri": "lab28://delta/documents",
+      "timestamp": "2026-09-03T23:00:00Z"
+    }
+  ]
+}

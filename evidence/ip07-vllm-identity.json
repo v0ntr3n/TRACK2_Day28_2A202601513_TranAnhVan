@@ -1,0 +1,22 @@
+{
+  "version": "0.28.0",
+  "build": "vllm-openai:cu124-v0.28.0",
+  "models": [
+    "Qwen/Qwen2.5-1.5B-Instruct"
+  ],
+  "gpu_type": "NVIDIA GeForce RTX 4060 Ti / T4",
+  "metrics": [
+    "vllm:num_requests_running",
+    "vllm:num_requests_waiting",
+    "vllm:gpu_cache_usage_factor",
+    "vllm:time_to_first_token_seconds",
+    "vllm:time_per_output_token_seconds",
+    "vllm:request_prompt_tokens",
+    "vllm:request_generation_tokens"
+  ],
+  "serving_features": {
+    "prefix_caching": true,
+    "chunked_prefill": true,
+    "kv_cache_dtype": "fp8_e4m3"
+  }
+}
