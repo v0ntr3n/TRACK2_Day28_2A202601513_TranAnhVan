@@ -11,7 +11,7 @@
   "points": [
     {
       "id": "IP01",
-      "name": "Data ingestion \u2192 Kafka",
+      "name": "Data ingestion → Kafka",
       "owner": "team-ingestion",
       "status": "not_ready",
       "detail": "KafkaException: KafkaError{code=_TRANSPORT,val=-195,str=\"Failed to get metadata: Local: Broker transport failure\"}",
@@ -19,7 +19,7 @@
     },
     {
       "id": "IP02",
-      "name": "Kafka \u2192 Airflow pipeline",
+      "name": "Kafka → Airflow pipeline",
       "owner": "team-ingestion",
       "status": "unverified",
       "detail": "not probed from the serving process; prove with evidence/ip02-airflow-run.json",
@@ -27,7 +27,7 @@
     },
     {
       "id": "IP03",
-      "name": "Pipeline \u2192 Delta Lake / Lakehouse",
+      "name": "Pipeline → Delta Lake / Lakehouse",
       "owner": "team-data",
       "status": "not_ready",
       "detail": "feedback: no Delta table at .lab28/delta/feedback; documents: no Delta table at .lab28/delta/documents",
@@ -35,7 +35,7 @@
     },
     {
       "id": "IP04",
-      "name": "Lakehouse \u2192 Feature Store (Feast)",
+      "name": "Lakehouse → Feature Store (Feast)",
       "owner": "team-data",
       "status": "not_ready",
       "detail": "unreachable: ConnectError",
@@ -43,7 +43,7 @@
     },
     {
       "id": "IP05",
-      "name": "Data \u2192 Vector Store (embeddings)",
+      "name": "Data → Vector Store (embeddings)",
       "owner": "team-serving",
       "status": "not_ready",
       "detail": "0 points; ResponseHandlingException: [WinError 10061] No connection could be made because the target machine actively refused it",
@@ -51,7 +51,7 @@
     },
     {
       "id": "IP06",
-      "name": "MLflow \u2192 Model Registry",
+      "name": "MLflow → Model Registry",
       "owner": "team-data",
       "status": "not_ready",
       "detail": "no 'champion' release for lab28-rag-release: API request to http://localhost:5000/api/2.0/mlflow/registered-models/alias failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/registered-models/alias?name=lab28-rag-release&alias=champion (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
@@ -59,7 +59,7 @@
     },
     {
       "id": "IP07",
-      "name": "Model \u2192 vLLM / SGLang serving",
+      "name": "Model → vLLM / SGLang serving",
       "owner": "team-serving",
       "status": "not_ready",
       "detail": "not a verifiable vLLM server: unreachable: ConnectError",
@@ -67,7 +67,7 @@
     },
     {
       "id": "IP08",
-      "name": "Serving \u2192 API Gateway",
+      "name": "Serving → API Gateway",
       "owner": "team-platform",
       "status": "unverified",
       "detail": "not probed from the serving process; prove with evidence/ip08-gateway.json",
@@ -75,7 +75,7 @@
     },
     {
       "id": "IP09",
-      "name": "All components \u2192 Prometheus / Grafana",
+      "name": "All components → Prometheus / Grafana",
       "owner": "team-platform",
       "status": "unverified",
       "detail": "not probed from the serving process; prove with evidence/ip09-prometheus-targets.json + evidence/ip09-grafana-dashboards.json",
@@ -83,7 +83,7 @@
     },
     {
       "id": "IP10",
-      "name": "All components \u2192 LangSmith tracing",
+      "name": "All components → LangSmith tracing",
       "owner": "team-platform",
       "status": "unverified",
       "detail": "not probed from the serving process; prove with evidence/ip10-trace.json",
